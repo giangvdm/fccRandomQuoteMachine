@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Quote Machine - a freeCodeCamp Intermediate Front-end Project</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Giang Vu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="rdQtMchine.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <script src="core.js"></script>
+
+        <!-- Getting tooltips ready -->
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip(); 
+            });
+        </script>
+        <div id="myMachine">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10">
+                    <div>
+                        <span>
+                            <button type="button" class="btn" id="btn-power" onclick="powerButton()">
+                                <span class="glyphicon glyphicon-off"></span>
+                            </button>
+                        </span>
+                        <a class="myToolTip" href="#" data-toggle="tooltip" data-placement="top" 
+                            title="&quot;Power&quot; LED Indicator">
+                            <span class="led" id="led1"></span>
+                        </a>
+                        <a class="myToolTip" href="#" data-toggle="tooltip" data-placement="top"
+                            title="&quot;Data&quot; LED Indicator">
+                        <span class="led" id="led2"></span>
+                        </a>
+                        <span class="led" id="led3"></span>
+                        <button onclick="tweet()" class="btn fa fa-twitter" id="social-btn"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-offset-1 col-md-10">
+                    <div class="well" id="quoteDisplay">Welcome to Random Quote Machine!</div>
+                    <div>
+                        <span class="well" id="quoteAuthor">Try any button</span>
+                        <button type="button" class="btn" id="btn-getQuote" onclick="getQuote()">
+                            More Quote
+                        </button>
+                    </div>    
+                </div>
+            </div>
+        </div> 
+        <div class="container"></div>          
+    </body>
+</html>
